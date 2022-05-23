@@ -1,32 +1,27 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace TestMaximum
 {
     class Program
     {
-
-
         static void Main(string[] args)
         {
-            // Welcome Message
-            Console.WriteLine("\n");
-            Console.WriteLine("------------Welcome to Find the Maximum Number Program----------");
-            Console.WriteLine("\n");
+            
+                //Welcome Message
+                Console.WriteLine("Welcome to Maximum Number");
 
-            //Calling Class to call a Function
-            MaximumNumberCheck maximumNumberCheck = new MaximumNumberCheck();
-            int outputInteger = maximumNumberCheck.MaximumIngerNumber(11, 22, 33);
+                //Calling Class to call a Function
+                MaximumNumberCheck maximumNumberCheck = new MaximumNumberCheck();
 
-            //Display Output
-            Console.WriteLine("Maximum Number of Integer : " + outputInteger);
+                //Maximum Number At First Place
+                int outputInteger = maximumNumberCheck.MaximumIngerNumber(211, 182, 103);
 
-            Console.ReadLine();
+                //Display Output
+                Console.WriteLine("Maximum Number of Integer : " + outputInteger);
+
+                
+
+            
         }
     }
 }
