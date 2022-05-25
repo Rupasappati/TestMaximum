@@ -8,83 +8,29 @@ namespace TestMaximum
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             //Welcome Message
             Console.WriteLine("=-=-=-=-=-Welcome to the Find Maximum Problem using Generics-=-=-=-=-=");
 
-            //Calling Class to call a Function
-            MaximumNumberCheck maximumNumberCheck = new MaximumNumberCheck();
+            //Maximum Integer Number
+            GenericMaximum<int> genericMaximumInteger = new GenericMaximum<int>(34, 23, 12);
+            int outputInteger1 = genericMaximumInteger.MaxMethod();
+            Console.WriteLine("Maximum Integer Number : " + outputInteger1);
 
-           /*//Maximum Number of Integer
-            int outputInteger = maximumNumberCheck.MaximumIngerNumber(11, 22, 33);
-            Console.WriteLine("Maximum Number of Integer : " + outputInteger);
+            //Maximum Float Number
+            GenericMaximum<double> genericMaximumFloat = new GenericMaximum<double>(3.4, 22.23, 48.12);
+            double outputDouble1 = genericMaximumFloat.MaxMethod();
+            Console.WriteLine("Maximum Float Number : " + outputDouble1);
 
-            //Maximum Number At First Place
-            double outputFloat1 = maximumNumberCheck.MaximumFloatNumber(14.1, 2.82, 7.33);
-            Console.WriteLine("Maximum Number of Float at First Place : " + outputFloat1);
-            
-            //Maximum Number At Second Place
-            double outputFloat2 = maximumNumberCheck.MaximumFloatNumber(4.1, 28.2, 12.8);
-            Console.WriteLine("Maximum Number of Integer at Second Place : " + outputFloat2);
+            //Maximum String Number
+            GenericMaximum<string> genericMaximumString = new GenericMaximum<string>("Apple", "Banana", "Peach");
+            string outputString1 = genericMaximumString.MaxMethod();
+            Console.WriteLine("Maximum String : " + outputString1);
 
-            //Maximum Number At Third Place
-            double outputFloat3 = maximumNumberCheck.MaximumFloatNumber(75.9, 68.47, 77.3);
-            Console.WriteLine("Maximum Number of Integer at Third Place : " + outputFloat3);
-
-            //Maximum Number At First Place
-            string outputString1 = maximumNumberCheck.MaximumStringNumber("Peach", "Apple", "Banana");
-            Console.WriteLine("Maximum Number of String at First Place : " + outputString1);
-
-            //Maximum Number At Second Place
-            string outputString2 = maximumNumberCheck.MaximumStringNumber("Apple", "Peach", "Banana");
-            Console.WriteLine("Maximum Number of String at Seond Place : " + outputString2);
-
-            //Maximum Number At Third Place
-            string outputString3 = maximumNumberCheck.MaximumStringNumber("Apple", "Banana", "Peach");
-            Console.WriteLine("Maximum Number of String at Third Place : " + outputString3);*/
-
-            //Maximum Number At First, Second and Third Place 
-            int outputInt1 = maximumNumberCheck.MaximumNumber<int>(434, 57, 12);
-            int outputInt2 = maximumNumberCheck.MaximumNumber<int>(344, 734, 712);
-            int outputInt3 = maximumNumberCheck.MaximumNumber<int>(343, 344, 1200);
-
-            //Maximum Number At First, Second and Third Place 
-            double outputFloat1 = maximumNumberCheck.MaximumNumber<double>(128.9, 8.9, 11.75);
-            double outputFloat2 = maximumNumberCheck.MaximumNumber<double>(12.9, 48.9, 28.29);
-            double outputFloat3 = maximumNumberCheck.MaximumNumber<double>(1.9, 4.0, 4.9);
-
-            //Maximum Number At First, Second and Third Place 
-            string outputString1 = maximumNumberCheck.MaximumNumber<string>("Peach", "Apple", "Banana");
-            string outputString2 = maximumNumberCheck.MaximumNumber<string>("Apple", "Peach", "Banana");
-            string outputString3 = maximumNumberCheck.MaximumNumber<string>("Apple", "Banana", "Peach");
-
-            //Display Results
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine("Results Of an Integer : ");
-            Console.WriteLine("Integer at First Place : " + outputInt1);
-            Console.WriteLine("Integer at Second Place : " + outputInt2);
-            Console.WriteLine("Integer at Third Place : " + outputInt3);
-            Console.WriteLine("----------------------------------------");
-
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine("Results Of an Float : ");
-            Console.WriteLine("Float at First Place : " + outputFloat1);
-            Console.WriteLine("Float at Second Place : " + outputFloat2);
-            Console.WriteLine("Float at Third Place : " + outputFloat3);
-            Console.WriteLine("----------------------------------------");
-
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine("Results Of an String : ");
-            Console.WriteLine("String at First Place : " + outputString1);
-            Console.WriteLine("String at Second Place : " + outputString2);
-            Console.WriteLine("String at Third Place : " + outputString3);
-            Console.WriteLine("----------------------------------------");
-
-
-       
             Console.ReadLine();
         }
+
+
     }
 }
